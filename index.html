@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cossi Xavier Agbeto – Health Economics</title>
+<meta name="description" content="Cossi Xavier Agbeto, PhD candidate in Health Economics at UCLouvain (IRES/LIDAM and IRSS). Research on equity in healthcare access and universal health coverage in Benin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: fixed identity column on the left, reading column on the right; stacks on phones. */
+:root{
+  --bg:#f5f6f8;
+  --surface:#ffffff;
+  --ink:#16213a;
+  --muted:#5a6478;
+  --line:#dde1e8;
+  --accent:#0e6e68;
+  --accent-soft:#e3f1ef;
+  --display:"Newsreader", Georgia, "Times New Roman", serif;
+  --body:"IBM Plex Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1420; --surface:#161d2c; --ink:#e7ebf2; --muted:#9aa4b8;
+    --line:#2a3346; --accent:#4fc1b6; --accent-soft:#16302f; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1420; --surface:#161d2c; --ink:#e7ebf2; --muted:#9aa4b8;
+  --line:#2a3346; --accent:#4fc1b6; --accent-soft:#16302f; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:56px 24px 72px;display:grid;grid-template-columns:280px 1fr;gap:64px}
+aside{position:sticky;top:40px;align-self:start;display:flex;flex-direction:column;gap:20px}
+.avatar{width:132px;height:132px;border-radius:50%;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;font-family:var(--display);font-size:46px;font-weight:600;border:1px solid var(--line)}
+.name{font-family:var(--display);font-weight:600;font-size:34px;line-height:1.1;margin:0;text-wrap:balance}
+.role{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
+.aff{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.aff li{padding-left:12px;border-left:2px solid var(--accent)}
+.links{display:flex;flex-direction:column;gap:6px;font-size:15px}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;width:max-content}
+.lang button{font:inherit;font-size:13px;font-weight:600;letter-spacing:.04em;padding:6px 14px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
+main{display:flex;flex-direction:column;gap:56px;min-width:0}
+nav{display:flex;flex-wrap:wrap;gap:22px;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--line);padding-bottom:14px}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--accent)}
+h2{font-family:var(--display);font-weight:600;font-size:28px;margin:0 0 16px;text-wrap:balance}
+section p{max-width:65ch;margin:0 0 14px}
+.notice{display:flex;gap:14px;align-items:baseline;background:var(--accent-soft);border-radius:10px;padding:14px 18px;font-size:15px;max-width:65ch}
+.notice strong{color:var(--accent);white-space:nowrap}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;padding:0;list-style:none}
+.tags li{font-size:14px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 12px}
+.projects{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.project{display:grid;grid-template-columns:72px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.num{font-family:var(--display);font-size:15px;color:var(--muted);padding-top:3px}
+.project h3{font-size:18px;font-weight:600;margin:0 0 6px;line-height:1.4}
+.project p{font-size:16px;color:var(--muted);margin:0 0 8px}
+.meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+.meta span{white-space:nowrap}
+.pubs{list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:14px;max-width:70ch}
+.pubs li{padding-left:16px;border-left:2px solid var(--line);font-size:16px}
+.pubs .yr{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px;margin-right:6px}
+.pubs .t{font-weight:600}
+.pubs .v{color:var(--muted);font-style:italic}
+h3.sub{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:760px}
+.methods div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.methods b{display:block;font-size:15px;margin-bottom:4px}
+.methods span{font-size:14px;color:var(--muted)}
+.contact dl{display:grid;grid-template-columns:140px 1fr;gap:8px 16px;margin:0;font-size:16px;max-width:65ch}
+.contact dt{color:var(--muted)}
+.contact dd{margin:0}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+[data-lang-fr]{display:none}
+html[lang="fr"] [data-lang-en]{display:none}
+html[lang="fr"] [data-lang-fr]{display:revert}
+@media (max-width:820px){
+  .wrap{grid-template-columns:1fr;gap:40px;padding-top:36px}
+  aside{position:static}
+  .avatar{width:104px;height:104px;font-size:36px}
+}
+@media (max-width:420px){
+  .project{grid-template-columns:1fr;gap:4px}
+  .contact dl{grid-template-columns:1fr;gap:2px}
+  .contact dd{margin-bottom:10px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside>
+    <div class="avatar" aria-hidden="true">CA</div>
+    <div>
+      <h1 class="name">Cossi Xavier Agbeto</h1>
+      <p class="role" data-lang-en>PhD candidate in Health Economics</p>
+      <p class="role" data-lang-fr>Doctorant en économie de la santé</p>
+    </div>
+    <ul class="aff">
+      <li>IRES / LIDAM, UCLouvain</li>
+      <li>IRSS, UCLouvain</li>
+      <li>Louvain-la-Neuve, Belgium</li>
+    </ul>
+    <div class="links">
+      <a href="#contact" data-lang-en>Email &amp; contact</a>
+      <a href="#contact" data-lang-fr>E-mail et contact</a>
+      <a href="files/CV_Cossi_Agbeto.pdf">CV (PDF)</a>
+      <a href="https://orcid.org/0009-0001-7037-3393">ORCID</a>
+      <a href="https://www.linkedin.com/in/cossi-xavier-agbeto-259440137/">LinkedIn</a>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="btn-en" aria-pressed="true">EN</button>
+      <button type="button" id="btn-fr" aria-pressed="false">FR</button>
+    </div>
+  </aside>
+
+  <main>
+    <nav aria-label="Sections">
+      <a href="#about" data-lang-en>About</a><a href="#about" data-lang-fr>Présentation</a>
+      <a href="#research" data-lang-en>Research</a><a href="#research" data-lang-fr>Recherche</a>
+      <a href="#publications" data-lang-en>Publications</a><a href="#publications" data-lang-fr>Publications</a>
+      <a href="#methods" data-lang-en>Methods</a><a href="#methods" data-lang-fr>Méthodes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+      <h2 data-lang-en>About</h2>
+      <h2 data-lang-fr>Présentation</h2>
+      <div data-lang-en>
+        <p>I am a PhD candidate in Health Economics at UCLouvain, Belgium, affiliated with the Institute of Economic and Social Research (IRES/LIDAM) and the Institute of Health and Society (IRSS). I am supervised by Prof. Sandy Tubeuf and Prof. Gilles-Armand Sossou.</p>
+        <p>My research focuses on equity in healthcare access and utilization in low- and middle-income countries, with a particular focus on Benin and its progress towards universal health coverage. My thesis examines wealth-related inequalities in preventive healthcare, evaluates the targeting accuracy of Benin's national health insurance scheme, and investigates the socioeconomic distribution of depressive symptoms and their links with healthcare-seeking behaviour.</p>
+        <div class="notice"><strong>14 Dec 2026</strong><span>Public PhD defence, UCLouvain, Louvain-la-Neuve, 15:00–17:30.</span></div>
+      </div>
+      <div data-lang-fr>
+        <p>Je suis doctorant en économie de la santé à l'UCLouvain, en Belgique, affilié à l'Institut de recherches économiques et sociales (IRES/LIDAM) et à l'Institut de recherche santé et société (IRSS). Je suis sous la direction de la Prof. Sandy Tubeuf et du Prof. Gilles-Armand Sossou.</p>
+        <p>Mes recherches portent sur l'équité dans l'accès aux soins et leur utilisation dans les pays à revenu faible et intermédiaire, en particulier au Bénin, dans le contexte de la couverture sanitaire universelle. Ma thèse analyse les inégalités liées à la richesse dans le recours aux soins préventifs, évalue le ciblage de l'assurance maladie nationale du Bénin et étudie la distribution socioéconomique des symptômes dépressifs ainsi que leur lien avec le recours aux soins.</p>
+        <div class="notice"><strong>14 déc. 2026</strong><span>Soutenance publique de thèse, UCLouvain, Louvain-la-Neuve, 15h00–17h30.</span></div>
+      </div>
+      <ul class="tags" data-lang-en>
+        <li>Health economics</li><li>Health equity</li><li>Universal health coverage</li><li>Health insurance</li><li>Mental health</li><li>Development economics</li>
+      </ul>
+      <ul class="tags" data-lang-fr>
+        <li>Économie de la santé</li><li>Équité en santé</li><li>Couverture sanitaire universelle</li><li>Assurance maladie</li><li>Santé mentale</li><li>Économie du développement</li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2 data-lang-en>Research</h2>
+      <h2 data-lang-fr>Recherche</h2>
+      <div class="projects">
+        <article class="project">
+          <div class="num" data-lang-en>Ch. 1</div><div class="num" data-lang-fr>Ch. 1</div>
+          <div>
+            <h3 data-lang-en>Wealth-related inequalities in HIV testing and cardiovascular disease screening in Benin</h3>
+            <h3 data-lang-fr>Inégalités liées à la richesse dans le dépistage du VIH et des maladies cardiovasculaires au Bénin</h3>
+            <p data-lang-en>Measures trends in wealth-related inequalities in two preventive services, from a gender-sensitive perspective, and decomposes them into their contributing factors.</p>
+            <p data-lang-fr>Mesure l'évolution des inégalités liées à la richesse dans deux services préventifs, dans une perspective sensible au genre, et les décompose selon leurs facteurs explicatifs.</p>
+            <div class="meta"><span>Benin DHS 2011–12 &amp; 2017–18</span><span>Erreygers concentration index</span><span data-lang-en>Wagstaff decomposition</span><span data-lang-fr>Décomposition de Wagstaff</span></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="num">Ch. 2</div>
+          <div>
+            <h3 data-lang-en>Does Benin's national health insurance reach the extreme poor?</h3>
+            <h3 data-lang-fr>L'assurance maladie nationale du Bénin atteint-elle les plus pauvres ?</h3>
+            <p data-lang-en>Evaluates the targeting accuracy of the NHIS, measuring inclusion and exclusion errors, and examines antenatal care, facility-based delivery and facility visits across eligibility and enrolment groups.</p>
+            <p data-lang-fr>Évalue la précision du ciblage de l'assurance maladie en mesurant les erreurs d'inclusion et d'exclusion, et examine les consultations prénatales, l'accouchement en établissement et le recours aux formations sanitaires selon l'éligibilité et l'adhésion.</p>
+            <div class="meta"><span data-lang-en>Primary survey, 3,150 adults</span><span data-lang-fr>Enquête primaire, 3 150 adultes</span><span data-lang-en>3 NHIS pilot health zones</span><span data-lang-fr>3 zones sanitaires pilotes</span><span data-lang-en>Confusion-matrix targeting analysis</span><span data-lang-fr>Analyse du ciblage (matrice de confusion)</span></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="num">Ch. 3</div>
+          <div>
+            <h3 data-lang-en>Poverty, depressive symptoms and healthcare use in Benin</h3>
+            <h3 data-lang-fr>Pauvreté, symptômes dépressifs et recours aux soins au Bénin</h3>
+            <p data-lang-en>Documents the prevalence and socioeconomic distribution of depressive symptoms in NHIS pilot areas and their relationship with healthcare-seeking behaviour.</p>
+            <p data-lang-fr>Documente la prévalence et la distribution socioéconomique des symptômes dépressifs dans les zones pilotes de l'assurance maladie, ainsi que leur lien avec le recours aux soins.</p>
+            <div class="meta"><span data-lang-en>Primary survey, 7 municipalities</span><span data-lang-fr>Enquête primaire, 7 communes</span><span data-lang-en>Socioeconomic inequality analysis</span><span data-lang-fr>Analyse des inégalités socioéconomiques</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <h3 class="sub" data-lang-en>Working papers</h3><h3 class="sub" data-lang-fr>Documents de travail</h3>
+      <ul class="pubs">
+        <li><span class="yr">2026</span><span data-lang-en>Three papers from my PhD thesis (see Research), one of them currently under review.</span><span data-lang-fr>Trois articles issus de ma thèse (voir Recherche), dont un actuellement en évaluation.</span></li>
+      </ul>
+      <h3 class="sub" data-lang-en>Reports</h3><h3 class="sub" data-lang-fr>Rapports</h3>
+      <ul class="pubs">
+        <li><span class="yr">2025</span><span class="t">Survey of health status and healthcare use among the over-18s in three health zones in Benin.</span> <span data-lang-en>Synthesis report, final version, 9 June 2025. Lead researcher.</span><span data-lang-fr>Rapport de synthèse, version finale, 9 juin 2025. Chercheur principal.</span> <a href="https://p4h.world/en/documents/survey-of-health-status-and-healthcare-use-among-the-over-18s-in-three-health-zones-in-benin/">P4H Network</a></li>
+      </ul>
+      <h3 class="sub" data-lang-en>Conference contributions</h3><h3 class="sub" data-lang-fr>Communications</h3>
+      <ul class="pubs">
+        <li><span class="yr">2023</span>Paul E., Bourgeois M., Sambiéni N.E., Soulemana Abdoulaye A., Sossou G.A., Gnammou J., <b>Agbeto C.X.</b> <span data-lang-en>Roundtable on the development of social health insurance in Benin.</span><span data-lang-fr>Table ronde sur le développement de l'assurance maladie sociale au Bénin.</span> <span class="v">13th European Congress on Global Health (ECTMIH 2023)</span>, Utrecht, 20–23 November 2023.</li>
+      </ul>
+    </section>
+
+    <section id="methods">
+      <h2 data-lang-en>Methods &amp; data</h2>
+      <h2 data-lang-fr>Méthodes et données</h2>
+      <div class="methods">
+        <div><b data-lang-en>Inequality measurement</b><b data-lang-fr>Mesure des inégalités</b><span data-lang-en>Concentration curves and indices, Erreygers correction, decomposition</span><span data-lang-fr>Courbes et indices de concentration, correction d'Erreygers, décomposition</span></div>
+        <div><b data-lang-en>Programme targeting</b><b data-lang-fr>Ciblage des programmes</b><span data-lang-en>Inclusion and exclusion errors, eligibility vs enrolment</span><span data-lang-fr>Erreurs d'inclusion et d'exclusion, éligibilité et adhésion</span></div>
+        <div><b data-lang-en>Survey data</b><b data-lang-fr>Données d'enquête</b><span data-lang-en>Demographic and Health Surveys; own primary data collection in Benin</span><span data-lang-fr>Enquêtes démographiques et de santé ; collecte de données primaires au Bénin</span></div>
+        <div><b data-lang-en>Software</b><b data-lang-fr>Logiciels</b><span>Stata, LaTeX</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <dl>
+        <dt>E-mail</dt><dd><a href="mailto:cossi.agbeto@uclouvain.be">cossi.agbeto@uclouvain.be</a></dd>
+        <dt data-lang-en>Address</dt><dt data-lang-fr>Adresse</dt>
+        <dd>IRES / LIDAM, UCLouvain<br>Place Montesquieu 3<br>1348 Louvain-la-Neuve, Belgium</dd>
+        <dt data-lang-en>Profiles</dt><dt data-lang-fr>Profils</dt>
+        <dd>ORCID: <a href="https://orcid.org/0009-0001-7037-3393">0009-0001-7037-3393</a><br><a href="https://www.linkedin.com/in/cossi-xavier-agbeto-259440137/">LinkedIn</a></dd>
+      </dl>
+    </section>
+
+    <footer>© 2026 Cossi Xavier Agbeto</footer>
+  </main>
+</div>
+<script>
+(function(){
+  var root=document.documentElement, en=document.getElementById('btn-en'), fr=document.getElementById('btn-fr');
+  function set(l){
+    root.lang=l; en.setAttribute('aria-pressed',l==='en'); fr.setAttribute('aria-pressed',l==='fr');
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  en.addEventListener('click',function(){set('en')});
+  fr.addEventListener('click',function(){set('fr')});
+  try{var s=localStorage.getItem('lang'); if(s==='fr'||s==='en') set(s);}catch(e){}
+})();
+</script>
+</body>
+</html>
