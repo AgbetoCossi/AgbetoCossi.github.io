@@ -88,6 +88,9 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
 [data-lang-fr]{display:none}
 html[lang="fr"] [data-lang-en]{display:none}
 html[lang="fr"] [data-lang-fr]{display:revert}
+@media (max-height:860px){
+  aside{position:static}
+}
 @media (max-width:820px){
   .wrap{grid-template-columns:1fr;gap:40px;padding-top:36px}
   aside{position:static}
